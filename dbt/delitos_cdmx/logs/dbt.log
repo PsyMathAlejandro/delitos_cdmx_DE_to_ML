@@ -1,0 +1,554 @@
+[0m19:58:47.340223 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77f3805c40>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77f34e8fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77f2f83f80>]}
+
+
+============================== 19:58:47.343835 | 16ccbd76-d41a-479a-a00b-808fab8efad7 ==============================
+[0m19:58:47.343835 [info ] [MainThread]: Running with dbt=1.11.8
+[0m19:58:47.344550 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'introspect': 'True', 'invocation_command': 'dbt debug --profiles-dir /tmp/dbt_temp/delitos_cdmx', 'use_colors': 'True', 'quiet': 'False', 'debug': 'False', 'fail_fast': 'False', 'printer_width': '80', 'static_parser': 'True', 'warn_error': 'None', 'log_cache_events': 'False', 'log_format': 'default', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'empty': 'None', 'write_json': 'True', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'cache_selected_only': 'False'}
+[0m19:58:47.354799 [info ] [MainThread]: dbt version: 1.11.8
+[0m19:58:47.355394 [info ] [MainThread]: python version: 3.12.3
+[0m19:58:47.356103 [info ] [MainThread]: python path: /local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/bin/python
+[0m19:58:47.356801 [info ] [MainThread]: os info: Linux-6.6.137.1-2.azl3-x86_64-with-glibc2.39
+[0m19:58:48.768063 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m19:58:48.768786 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m19:58:48.769323 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m19:58:49.713378 [info ] [MainThread]: Using profiles dir at /tmp/dbt_temp/delitos_cdmx
+[0m19:58:49.714140 [info ] [MainThread]: Using profiles.yml file at /tmp/dbt_temp/delitos_cdmx/profiles.yml
+[0m19:58:49.714798 [info ] [MainThread]: Using dbt_project.yml file at /tmp/dbt_temp/delitos_cdmx/dbt_project.yml
+[0m19:58:49.715356 [info ] [MainThread]: adapter type: databricks
+[0m19:58:49.715990 [info ] [MainThread]: adapter version: 1.12.0
+[0m19:58:49.882380 [info ] [MainThread]: Configuration:
+[0m19:58:49.883062 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m19:58:49.883562 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m19:58:49.884145 [info ] [MainThread]: Required dependencies:
+[0m19:58:49.884794 [debug] [MainThread]: Executing "git --help"
+[0m19:58:49.984208 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify tags\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m19:58:49.984859 [debug] [MainThread]: STDERR: "b''"
+[0m19:58:49.985311 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m19:58:49.985841 [info ] [MainThread]: Connection:
+[0m19:58:49.986425 [info ] [MainThread]:   host: https://adb-7405605613238798.18.azuredatabricks.net
+[0m19:58:49.987337 [info ] [MainThread]:   http_path: /sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm
+[0m19:58:49.987961 [info ] [MainThread]:   catalog: delitos
+[0m19:58:49.988551 [info ] [MainThread]:   schema: gold
+[0m19:58:49.989739 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m19:58:50.232314 [debug] [MainThread]: Databricks adapter: Failed to query DBR version for http_path=/sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm: Runtime Error
+  credentials_manager must be set before querying DBR version
+[0m19:58:50.233129 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=debug) - Creating connection
+[0m19:58:50.233825 [debug] [MainThread]: Acquiring new databricks connection 'debug'
+[0m19:58:50.234456 [debug] [MainThread]: Using databricks connection "debug"
+[0m19:58:50.235080 [debug] [MainThread]: On debug: select 1 as id
+[0m19:58:50.235710 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m20:02:38.512951 [error] [MainThread]: Encountered an error:
+
+[0m20:02:38.533185 [error] [MainThread]: Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/main.py", line 425, in debug
+    results = task.run()
+              ^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/debug.py", line 144, in run
+    connection_status = self.test_connection()
+                        ^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/debug.py", line 465, in test_connection
+    connection_result = self.attempt_connection(self.profile)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/debug.py", line 443, in attempt_connection
+    adapter.debug_query()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/spark/impl.py", line 519, in debug_query
+    self.execute("select 1 as id")
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/impl.py", line 465, in execute
+    return super().execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt_common/record.py", line 538, in record_replay_wrapper
+    return func_to_record(*call_args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/base/impl.py", line 471, in execute
+    return self.connections.execute(sql=sql, auto_begin=auto_begin, fetch=fetch, limit=limit)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 378, in execute
+    _, cursor = self.add_query(sql, auto_begin)
+                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 350, in add_query
+    handle: DatabricksHandle = connection.handle
+                               ^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 96, in handle
+    self._handle.resolve(self)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/contracts/connection.py", line 120, in resolve
+    return self.opener(connection)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 519, in open
+    return cls.retry_connection(
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/base/connections.py", line 237, in retry_connection
+    connection.handle = connect()
+                        ^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/connections.py", line 494, in connect
+    conn = DatabricksHandle.from_connection_args(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/adapters/databricks/handle.py", line 211, in from_connection_args
+    conn = dbsql.connect(**conn_args)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/__init__.py", line 90, in connect
+    return Connection(server_hostname, http_path, access_token, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/client.py", line 288, in __init__
+    self.session.open()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/session.py", line 132, in open
+    self._session_id = self.backend.open_session(
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 605, in open_session
+    response = self.make_request(self._client.OpenSession, open_session_req)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 516, in make_request
+    response_or_error_info = attempt_request(attempt)
+                             ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/backend/thrift_backend.py", line 421, in attempt_request
+    response = method(request)
+               ^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 204, in OpenSession
+    self.send_OpenSession(req)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/thrift_api/TCLIService/TCLIService.py", line 213, in send_OpenSession
+    self._oprot.trans.flush()
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/auth/thrift_http_client.py", line 193, in flush
+    self.__resp = self.__pool.request(
+                  ^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/_request_methods.py", line 143, in request
+    return self.request_encode_body(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/_request_methods.py", line 278, in request_encode_body
+    return self.urlopen(method, url, **extra_kw)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/connectionpool.py", line 942, in urlopen
+    return self.urlopen(
+           ^^^^^^^^^^^^^
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/connectionpool.py", line 940, in urlopen
+    retries.sleep(response)
+  File "/databricks/python/lib/python3.12/site-packages/urllib3/util/retry.py", line 359, in sleep
+    slept = self.sleep_for_retry(response)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/databricks/sql/auth/retry.py", line 303, in sleep_for_retry
+    time.sleep(proposed_wait)
+KeyboardInterrupt
+
+[0m20:02:38.535774 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 231.28851, "process_in_blocks": "23064", "process_kernel_time": 0.651209, "process_mem_max_rss": "245040", "process_out_blocks": "56", "process_user_time": 4.378686}
+[0m20:02:38.536614 [debug] [MainThread]: Command `dbt debug` failed at 20:02:38.536487 after 231.29 seconds
+[0m20:02:38.537377 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77f311e1e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77eff7a0f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f77f26165a0>]}
+[0m20:02:38.538152 [debug] [MainThread]: Flushing usage events
+[0m20:02:38.654692 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:03:27.757392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb2fce3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb2fcff20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb1e2c410>]}
+
+
+============================== 20:03:27.761691 | 7decc597-7c44-4f7a-9320-7ddd1d44a446 ==============================
+[0m20:03:27.761691 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:03:27.762502 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'quiet': 'False', 'introspect': 'True', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'cache_selected_only': 'False', 'empty': 'False', 'indirect_selection': 'eager', 'use_colors': 'True', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'partial_parse': 'True', 'no_print': 'None', 'warn_error': 'None', 'log_format': 'default', 'static_parser': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'version_check': 'True', 'log_cache_events': 'False', 'debug': 'False', 'invocation_command': 'dbt run --models silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None'}
+[0m20:03:27.763170 [warn ] [MainThread]: [[33mWARNING[0m]: Deprecated functionality
+Usage of `--models`, `--model`, and `-m` is deprecated in favor of `--select` or
+`-s`.
+[0m20:03:27.763825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'deprecation', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'property_': 'warn', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb2e10da0>]}
+[0m20:03:28.959805 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:03:28.960754 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:03:28.961465 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:03:30.074605 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9d089100>]}
+[0m20:03:30.178606 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb31364e0>]}
+[0m20:03:30.179411 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:03:30.405922 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:03:30.406687 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m20:03:30.407145 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'partial_parser', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9cef1c10>]}
+[0m20:03:33.139530 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9c20a1b0>]}
+[0m20:03:33.253242 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:03:33.255483 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:03:33.263386 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9c1b5a60>]}
+[0m20:03:33.264147 [info ] [MainThread]: Found 2 models, 4 data tests, 758 macros
+[0m20:03:33.264820 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '7decc597-7c44-4f7a-9320-7ddd1d44a446', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9cabd4f0>]}
+[0m20:03:33.265756 [warn ] [MainThread]: The selection criterion 'silver_base' does not match any enabled nodes
+[0m20:03:33.267775 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:03:33.268698 [debug] [MainThread]: Command end result
+[0m20:03:33.310035 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:03:33.313265 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:03:33.316592 [debug] [MainThread]: Wrote artifact RunExecutionResult to /tmp/dbt_temp/delitos_cdmx/target/run_results.json
+[0m20:03:33.317225 [warn ] [MainThread]: [[33mWARNING[0m][DeprecationsSummary]: Deprecated functionality
+Summary of encountered deprecations:
+- ModelParamUsageDeprecation: 1 occurrence
+To see all deprecation instances instead of just the first occurrence of each,
+run command again with the `--show-all-deprecations` flag. You may also need to
+run with `--no-partial-parse` as some deprecations are only encountered during
+parsing.
+[0m20:03:33.318437 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 5.66035, "process_in_blocks": "264", "process_kernel_time": 0.658858, "process_mem_max_rss": "258344", "process_out_blocks": "5400", "process_user_time": 7.063758}
+[0m20:03:33.319449 [debug] [MainThread]: Command `dbt run` succeeded at 20:03:33.319298 after 5.66 seconds
+[0m20:03:33.320079 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbdb1e177a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9c94c800>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fbd9cabd4f0>]}
+[0m20:03:33.320765 [debug] [MainThread]: Flushing usage events
+[0m20:03:33.448031 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:06:04.075635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb4353710>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb4352030>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb43530b0>]}
+
+
+============================== 20:06:04.080079 | 15b2c4c2-ea16-4502-b55a-c158ed65b31f ==============================
+[0m20:06:04.080079 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:06:04.080971 [debug] [MainThread]: running dbt with arguments {'debug': 'True', 'use_colors': 'True', 'log_format': 'default', 'warn_error': 'None', 'target_path': 'None', 'introspect': 'True', 'partial_parse': 'True', 'no_print': 'None', 'write_json': 'True', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx --debug', 'static_parser': 'True', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'version_check': 'True', 'quiet': 'False'}
+[0m20:06:05.146909 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:06:05.147875 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:06:05.148631 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:06:06.284220 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '15b2c4c2-ea16-4502-b55a-c158ed65b31f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fada11e2450>]}
+[0m20:06:06.421315 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '15b2c4c2-ea16-4502-b55a-c158ed65b31f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb15e6fc0>]}
+[0m20:06:06.422539 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:06:06.729231 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:06:06.857541 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:06:06.858131 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:06:06.858575 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:06:06.903498 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '15b2c4c2-ea16-4502-b55a-c158ed65b31f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad9a7baf90>]}
+[0m20:06:07.150418 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:06:07.153504 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:06:07.163569 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '15b2c4c2-ea16-4502-b55a-c158ed65b31f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad9a099430>]}
+[0m20:06:07.164380 [info ] [MainThread]: Found 2 models, 4 data tests, 758 macros
+[0m20:06:07.165019 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '15b2c4c2-ea16-4502-b55a-c158ed65b31f', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fad9a33be90>]}
+[0m20:06:07.165997 [warn ] [MainThread]: The selection criterion 'silver_base' does not match any enabled nodes
+[0m20:06:07.167855 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:06:07.170581 [debug] [MainThread]: Command end result
+[0m20:06:07.227384 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:06:07.230711 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:06:07.236350 [debug] [MainThread]: Wrote artifact RunExecutionResult to /tmp/dbt_temp/delitos_cdmx/target/run_results.json
+[0m20:06:07.237951 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.2489986, "process_in_blocks": "0", "process_kernel_time": 0.712507, "process_mem_max_rss": "249564", "process_out_blocks": "3616", "process_user_time": 4.629306}
+[0m20:06:07.239122 [debug] [MainThread]: Command `dbt run` succeeded at 20:06:07.238988 after 3.25 seconds
+[0m20:06:07.239959 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb164a600>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb38b7470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fadb367cd70>]}
+[0m20:06:07.240678 [debug] [MainThread]: Flushing usage events
+[0m20:06:07.448576 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:08:26.560773 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2d8caf290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2d8cac470>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2d8616e10>]}
+
+
+============================== 20:08:26.568296 | afe30916-e823-4bf7-8fc3-026cc27999a6 ==============================
+[0m20:08:26.568296 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:08:26.569261 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'warn_error': 'None', 'write_json': 'True', 'indirect_selection': 'eager', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'version_check': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx --debug', 'log_cache_events': 'False', 'log_format': 'default', 'use_colors': 'True', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'True', 'empty': 'False', 'introspect': 'True', 'target_path': 'None'}
+[0m20:08:27.954828 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:08:27.955549 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:08:27.956186 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:08:28.983065 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'afe30916-e823-4bf7-8fc3-026cc27999a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2becb9df0>]}
+[0m20:08:29.108852 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'afe30916-e823-4bf7-8fc3-026cc27999a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2bea12930>]}
+[0m20:08:29.110067 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:08:29.339657 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:08:29.501819 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:08:29.502654 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:08:29.503305 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:08:29.557347 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'afe30916-e823-4bf7-8fc3-026cc27999a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2be788440>]}
+[0m20:08:29.784034 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:08:29.786977 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:08:29.795632 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'afe30916-e823-4bf7-8fc3-026cc27999a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2be5b5e50>]}
+[0m20:08:29.796284 [info ] [MainThread]: Found 2 models, 4 data tests, 758 macros
+[0m20:08:29.796804 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'afe30916-e823-4bf7-8fc3-026cc27999a6', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2be4ffbc0>]}
+[0m20:08:29.797571 [warn ] [MainThread]: The selection criterion 'silver_base' does not match any enabled nodes
+[0m20:08:29.799023 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:08:29.801539 [debug] [MainThread]: Command end result
+[0m20:08:29.847122 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:08:29.849437 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:08:29.853286 [debug] [MainThread]: Wrote artifact RunExecutionResult to /tmp/dbt_temp/delitos_cdmx/target/run_results.json
+[0m20:08:29.854545 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.4206114, "process_in_blocks": "0", "process_kernel_time": 0.632212, "process_mem_max_rss": "249052", "process_out_blocks": "3624", "process_user_time": 4.945663}
+[0m20:08:29.855408 [debug] [MainThread]: Command `dbt run` succeeded at 20:08:29.855287 after 3.42 seconds
+[0m20:08:29.856077 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2c4e8fbf0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2d790ad20>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7ff2d790a5d0>]}
+[0m20:08:29.856691 [debug] [MainThread]: Flushing usage events
+[0m20:08:29.918879 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:09:07.513078 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a74996cc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a74baf380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a74bafa70>]}
+
+
+============================== 20:09:07.517567 | 12344dc8-ee32-4b57-b0ff-d7be717f404a ==============================
+[0m20:09:07.517567 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:09:07.518258 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'cache_selected_only': 'False', 'printer_width': '80', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'quiet': 'False', 'static_parser': 'True', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx --debug', 'indirect_selection': 'eager', 'debug': 'True', 'write_json': 'True', 'empty': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'fail_fast': 'False', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'no_print': 'None', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'log_format': 'default', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None'}
+[0m20:09:08.622439 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:09:08.623213 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:09:08.623957 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:09:09.673601 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '12344dc8-ee32-4b57-b0ff-d7be717f404a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a73604f20>]}
+[0m20:09:09.775701 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '12344dc8-ee32-4b57-b0ff-d7be717f404a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a70f98620>]}
+[0m20:09:09.776523 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:09:10.006165 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:09:10.152964 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:10.153609 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:09:10.154113 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:10.206635 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '12344dc8-ee32-4b57-b0ff-d7be717f404a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a5a5fec30>]}
+[0m20:09:10.480851 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:09:10.483029 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:09:10.491332 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '12344dc8-ee32-4b57-b0ff-d7be717f404a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a5a2df860>]}
+[0m20:09:10.491932 [info ] [MainThread]: Found 2 models, 4 data tests, 758 macros
+[0m20:09:10.492314 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '12344dc8-ee32-4b57-b0ff-d7be717f404a', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a5a059070>]}
+[0m20:09:10.492940 [warn ] [MainThread]: The selection criterion 'silver_base' does not match any enabled nodes
+[0m20:09:10.494467 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:09:10.497205 [debug] [MainThread]: Command end result
+[0m20:09:10.547002 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:09:10.549939 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:09:10.554318 [debug] [MainThread]: Wrote artifact RunExecutionResult to /tmp/dbt_temp/delitos_cdmx/target/run_results.json
+[0m20:09:10.555761 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.1563718, "process_in_blocks": "0", "process_kernel_time": 0.688062, "process_mem_max_rss": "249184", "process_out_blocks": "3616", "process_user_time": 4.557913}
+[0m20:09:10.556662 [debug] [MainThread]: Command `dbt run` succeeded at 20:09:10.556525 after 3.16 seconds
+[0m20:09:10.557282 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a74184bc0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a74995f70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f0a749dff80>]}
+[0m20:09:10.557847 [debug] [MainThread]: Flushing usage events
+[0m20:09:10.652005 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:09:42.864132 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2afe9d0140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2affb8eff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2affcd9c10>]}
+
+
+============================== 20:09:42.868389 | b6c088bb-75fd-4079-8f17-b7b959a4a71b ==============================
+[0m20:09:42.868389 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:09:42.869051 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'debug': 'True', 'log_cache_events': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'quiet': 'False', 'use_experimental_parser': 'False', 'use_colors': 'True', 'write_json': 'True', 'version_check': 'True', 'log_format': 'default', 'indirect_selection': 'eager', 'no_print': 'None', 'introspect': 'True', 'partial_parse': 'True', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx --debug', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'target_path': 'None', 'fail_fast': 'False', 'static_parser': 'True'}
+[0m20:09:44.001445 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:09:44.002154 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:09:44.002884 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:09:44.968665 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'b6c088bb-75fd-4079-8f17-b7b959a4a71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2affcda600>]}
+[0m20:09:45.076727 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'b6c088bb-75fd-4079-8f17-b7b959a4a71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ae5c717f0>]}
+[0m20:09:45.077648 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:09:45.322632 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:09:45.485234 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:09:45.485856 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:09:45.486499 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:09:45.532238 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'b6c088bb-75fd-4079-8f17-b7b959a4a71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ae5b02870>]}
+[0m20:09:45.782783 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:09:45.786332 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:09:45.797392 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'b6c088bb-75fd-4079-8f17-b7b959a4a71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ae57244a0>]}
+[0m20:09:45.798372 [info ] [MainThread]: Found 2 models, 4 data tests, 758 macros
+[0m20:09:45.799025 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'b6c088bb-75fd-4079-8f17-b7b959a4a71b', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ae55544d0>]}
+[0m20:09:45.800067 [warn ] [MainThread]: The selection criterion 'silver_base' does not match any enabled nodes
+[0m20:09:45.802161 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m20:09:45.805232 [debug] [MainThread]: Command end result
+[0m20:09:45.873231 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:09:45.876540 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:09:45.883456 [debug] [MainThread]: Wrote artifact RunExecutionResult to /tmp/dbt_temp/delitos_cdmx/target/run_results.json
+[0m20:09:45.884969 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 3.1259425, "process_in_blocks": "0", "process_kernel_time": 0.616169, "process_mem_max_rss": "249256", "process_out_blocks": "3616", "process_user_time": 4.794197}
+[0m20:09:45.886084 [debug] [MainThread]: Command `dbt run` succeeded at 20:09:45.885949 after 3.13 seconds
+[0m20:09:45.886856 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2ae55d4050>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2affb8eff0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f2afea5de80>]}
+[0m20:09:45.887823 [debug] [MainThread]: Flushing usage events
+[0m20:09:45.961034 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:11:57.513595 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5519a2cb00>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f551abcd3d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f551ad99bb0>]}
+
+
+============================== 20:11:57.518117 | c0daf7be-117a-46aa-b8aa-8ee395fa4cf7 ==============================
+[0m20:11:57.518117 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:11:57.519000 [debug] [MainThread]: running dbt with arguments {'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'use_experimental_parser': 'False', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'printer_width': '80', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx', 'static_parser': 'True', 'quiet': 'False', 'indirect_selection': 'eager', 'write_json': 'True', 'partial_parse': 'True', 'no_print': 'None', 'version_check': 'True', 'fail_fast': 'False', 'cache_selected_only': 'False', 'log_format': 'default', 'target_path': 'None', 'use_colors': 'True', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'empty': 'False', 'debug': 'False'}
+[0m20:11:58.727975 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:11:58.728580 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:11:58.729030 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:11:59.778799 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'c0daf7be-117a-46aa-b8aa-8ee395fa4cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5504bac200>]}
+[0m20:11:59.878039 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'c0daf7be-117a-46aa-b8aa-8ee395fa4cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5519aba660>]}
+[0m20:11:59.879075 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:12:00.141430 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:12:00.270666 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m20:12:00.271471 [debug] [MainThread]: Partial parsing: added file: delitos_cdmx://models/sources.yml
+[0m20:12:00.272055 [debug] [MainThread]: Partial parsing: added file: delitos_cdmx://models/silver_base.sql
+[0m20:12:00.993149 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'c0daf7be-117a-46aa-b8aa-8ee395fa4cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5504382150>]}
+[0m20:12:01.122499 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:12:01.124972 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:12:01.135823 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'c0daf7be-117a-46aa-b8aa-8ee395fa4cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f550469c6b0>]}
+[0m20:12:01.136640 [info ] [MainThread]: Found 3 models, 4 data tests, 1 source, 758 macros
+[0m20:12:01.137358 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'c0daf7be-117a-46aa-b8aa-8ee395fa4cf7', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5504622660>]}
+[0m20:12:01.139937 [info ] [MainThread]: 
+[0m20:12:01.140690 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:12:01.141366 [info ] [MainThread]: 
+[0m20:12:01.142487 [debug] [MainThread]: Databricks adapter: Failed to query DBR version for http_path=/sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm: Runtime Error
+  credentials_manager must be set before querying DBR version
+[0m20:12:01.143217 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:12:01.143923 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:12:01.145354 [debug] [ThreadPool]: Databricks adapter: Failed to query DBR version for http_path=/sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm: Runtime Error
+  credentials_manager must be set before querying DBR version
+[0m20:12:01.146130 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_delitos) - Creating connection
+[0m20:12:01.146767 [debug] [ThreadPool]: Acquiring new databricks connection 'list_delitos'
+[0m20:12:01.164586 [debug] [ThreadPool]: Using databricks connection "list_delitos"
+[0m20:12:01.165288 [debug] [ThreadPool]: On list_delitos: /* {"app": "dbt", "dbt_version": "1.11.8", "dbt_databricks_version": "1.12.0", "databricks_sql_connector_version": "4.1.5", "profile_name": "delitos_cdmx", "target_name": "dev", "invocation_id": "c0daf7be-117a-46aa-b8aa-8ee395fa4cf7", "connection_name": "list_delitos"} */
+
+    
+
+  SHOW SCHEMAS IN `delitos`
+
+
+  
+[0m20:12:01.165947 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:21:43.521045 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3868e87a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3882f84a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3863d7260>]}
+
+
+============================== 20:21:43.525693 | cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9 ==============================
+[0m20:21:43.525693 [info ] [MainThread]: Running with dbt=1.11.8
+[0m20:21:43.526619 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'use_colors': 'True', 'empty': 'False', 'log_format': 'default', 'no_print': 'None', 'indirect_selection': 'eager', 'log_path': '/tmp/dbt_temp/delitos_cdmx/logs', 'cache_selected_only': 'False', 'invocation_command': 'dbt run --select silver_base --profiles-dir /tmp/dbt_temp/delitos_cdmx', 'debug': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'profiles_dir': '/tmp/dbt_temp/delitos_cdmx', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'static_parser': 'True', 'quiet': 'False', 'target_path': 'None', 'warn_error': 'None', 'version_check': 'True'}
+[0m20:21:44.697037 [debug] [MainThread]: Spark adapter: Setting pyhive.hive logging to ERROR
+[0m20:21:44.697910 [debug] [MainThread]: Spark adapter: Setting thrift.transport logging to ERROR
+[0m20:21:44.698567 [debug] [MainThread]: Spark adapter: Setting thrift.protocol logging to ERROR
+[0m20:21:45.740746 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3856c0aa0>]}
+[0m20:21:45.842682 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3856f3740>]}
+[0m20:21:45.843504 [info ] [MainThread]: Registered adapter: databricks=1.12.0
+[0m20:21:46.101107 [debug] [MainThread]: checksum: 7d524ac048c2100769df89d592e662e060a73ca564e31bd9c2a37efdfe8d8ab6, vars: {}, profile: , target: , version: 1.11.8
+[0m20:21:46.295552 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m20:21:46.296381 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m20:21:46.297273 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m20:21:46.386519 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc374372060>]}
+[0m20:21:46.657621 [debug] [MainThread]: Wrote artifact WritableManifest to /tmp/dbt_temp/delitos_cdmx/target/manifest.json
+[0m20:21:46.660819 [debug] [MainThread]: Wrote artifact SemanticManifest to /tmp/dbt_temp/delitos_cdmx/target/semantic_manifest.json
+[0m20:21:46.671710 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc370506de0>]}
+[0m20:21:46.672547 [info ] [MainThread]: Found 3 models, 4 data tests, 1 source, 758 macros
+[0m20:21:46.673252 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc386518fb0>]}
+[0m20:21:46.675541 [info ] [MainThread]: 
+[0m20:21:46.676270 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
+[0m20:21:46.676928 [info ] [MainThread]: 
+[0m20:21:46.678052 [debug] [MainThread]: Databricks adapter: Failed to query DBR version for http_path=/sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm: Runtime Error
+  credentials_manager must be set before querying DBR version
+[0m20:21:46.678737 [debug] [MainThread]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=master) - Creating connection
+[0m20:21:46.679370 [debug] [MainThread]: Acquiring new databricks connection 'master'
+[0m20:21:46.680886 [debug] [ThreadPool]: Databricks adapter: Failed to query DBR version for http_path=/sql/protocolv1/o/7405605613238798/0519-200023-7x1feffm: Runtime Error
+  credentials_manager must be set before querying DBR version
+[0m20:21:46.681436 [debug] [ThreadPool]: Databricks adapter: DatabricksDBTConnection(session-id=None, name=list_delitos) - Creating connection
+[0m20:21:46.681833 [debug] [ThreadPool]: Acquiring new databricks connection 'list_delitos'
+[0m20:21:46.700915 [debug] [ThreadPool]: Using databricks connection "list_delitos"
+[0m20:21:46.701627 [debug] [ThreadPool]: On list_delitos: /* {"app": "dbt", "dbt_version": "1.11.8", "dbt_databricks_version": "1.12.0", "databricks_sql_connector_version": "4.1.5", "profile_name": "delitos_cdmx", "target_name": "dev", "invocation_id": "cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9", "connection_name": "list_delitos"} */
+
+    
+
+  SHOW SCHEMAS IN `delitos`
+
+
+  
+[0m20:21:46.702235 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m20:26:02.725841 [error] [ThreadPool]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: %s
+[0m20:26:02.777135 [error] [ThreadPool]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=841.5014579296112/900.0, error-message=, http-code=None, method=OpenSession, no-retry-reason=non-retryable error, original-exception=Retry request would exceed Retry policy max retry duration of 900.0 seconds, query-id=None, session-id=None
+[0m20:26:02.780210 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+/* {"app": "dbt", "dbt_version": "1.11.8", "dbt_databricks_version": "1.12.0", "databricks_sql_connector_version": "4.1.5", "profile_name": "delitos_cdmx", "target_name": "dev", "invocation_id": "c0daf7be-117a-46aa-b8aa-8ee395fa4cf7", "connection_name": "list_delitos"} */
+
+    
+
+  SHOW SCHEMAS IN `delitos`
+
+
+  
+: Database Error
+  Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+[0m20:26:02.781151 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+macro list_schemas
+: Database Error
+  Database Error
+    Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+[0m20:26:02.781929 [debug] [ThreadPool]: On list_delitos: No close available on handle
+[0m20:26:02.782947 [info ] [MainThread]: 
+[0m20:26:02.783595 [info ] [MainThread]: Finished running  in 0 hours 14 minutes and 1.64 seconds (841.64s).
+[0m20:26:02.784741 [error] [MainThread]: Encountered an error:
+
+[0m20:26:02.789778 [error] [MainThread]: Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 733, in create_schemas
+    for ls_future in as_completed(list_futures):
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 243, in as_completed
+    waiter.event.wait(wait_timeout)
+  File "/usr/lib/python3.12/threading.py", line 655, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+[0m20:26:02.792627 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 845.3998, "process_in_blocks": "0", "process_kernel_time": 0.669479, "process_mem_max_rss": "260016", "process_out_blocks": "3632", "process_user_time": 5.542022}
+[0m20:26:02.793361 [debug] [MainThread]: Command `dbt run` failed at 20:26:02.793228 after 845.40 seconds
+[0m20:26:02.793843 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5519e2d910>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f5504382870>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7f54ffd867b0>]}
+[0m20:26:02.794351 [debug] [MainThread]: Flushing usage events
+[0m20:26:02.882997 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m20:35:47.919041 [error] [ThreadPool]: databricks-sql-connector adapter: ThriftBackend.attempt_request: Exception: %s
+[0m20:35:47.962397 [error] [ThreadPool]: Databricks adapter: Connection(session-id=Unknown) - Exception while trying to create connection: Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+Error properties: attempt=1/30, bounded-retry-delay=None, elapsed-seconds=841.1623163223267/900.0, error-message=, http-code=None, method=OpenSession, no-retry-reason=non-retryable error, original-exception=Retry request would exceed Retry policy max retry duration of 900.0 seconds, query-id=None, session-id=None
+[0m20:35:47.963660 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+/* {"app": "dbt", "dbt_version": "1.11.8", "dbt_databricks_version": "1.12.0", "databricks_sql_connector_version": "4.1.5", "profile_name": "delitos_cdmx", "target_name": "dev", "invocation_id": "cb80bb63-b7db-4c9c-a05e-bf0c8641c1f9", "connection_name": "list_delitos"} */
+
+    
+
+  SHOW SCHEMAS IN `delitos`
+
+
+  
+: Database Error
+  Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+[0m20:35:47.964660 [debug] [ThreadPool]: Databricks adapter: Exception while trying to execute query
+macro list_schemas
+: Database Error
+  Database Error
+    Error during request to server. Retry request would exceed Retry policy max retry duration of 900.0 seconds
+[0m20:35:47.965523 [debug] [ThreadPool]: On list_delitos: No close available on handle
+[0m20:35:47.966290 [info ] [MainThread]: 
+[0m20:35:47.966943 [info ] [MainThread]: Finished running  in 0 hours 14 minutes and 1.29 seconds (841.29s).
+[0m20:35:47.967901 [error] [MainThread]: Encountered an error:
+
+[0m20:35:47.970855 [error] [MainThread]: Traceback (most recent call last):
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+                      ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 391, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/requires.py", line 408, in wrapper
+    return func(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/cli/main.py", line 593, in run
+    results = task.run()
+              ^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 626, in run
+    result = self.execute_with_hooks(selected_uids)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 559, in execute_with_hooks
+    before_run_status = self.before_run(adapter, selected_uids)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/run.py", line 1114, in before_run
+    self.create_schemas(adapter, required_schemas)
+  File "/local_disk0/.ephemeral_nfs/envs/pythonEnv-3a42cfd0-e9e2-4654-868b-866552867842/lib/python3.12/site-packages/dbt/task/runnable.py", line 733, in create_schemas
+    for ls_future in as_completed(list_futures):
+  File "/usr/lib/python3.12/concurrent/futures/_base.py", line 243, in as_completed
+    waiter.event.wait(wait_timeout)
+  File "/usr/lib/python3.12/threading.py", line 655, in wait
+    signaled = self._cond.wait(timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/threading.py", line 355, in wait
+    waiter.acquire()
+KeyboardInterrupt
+
+[0m20:35:47.972655 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 844.56494, "process_in_blocks": "0", "process_kernel_time": 0.799914, "process_mem_max_rss": "253492", "process_out_blocks": "1856", "process_user_time": 4.867697}
+[0m20:35:47.973535 [debug] [MainThread]: Command `dbt run` failed at 20:35:47.973390 after 844.57 seconds
+[0m20:35:47.974244 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3868e87a0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc370a78f80>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7fc3706ef9e0>]}
+[0m20:35:47.974991 [debug] [MainThread]: Flushing usage events
+[0m20:35:48.038396 [debug] [MainThread]: An error was encountered while trying to flush usage events

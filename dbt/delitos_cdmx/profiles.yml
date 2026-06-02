@@ -1,0 +1,11 @@
+delitos_cdmx:
+  target: dev
+  outputs:
+    dev:
+      type: databricks
+      catalog: delitos
+      schema: gold
+      host: "host"
+      http_path: "path"
+      token: "token"
+      threads: 4
