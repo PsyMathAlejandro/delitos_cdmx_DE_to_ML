@@ -1,0 +1,61 @@
+{
+  "name": "etl_delitos_cdmx",
+  "email_notifications": {
+    "no_alert_for_skipped_runs": false
+  },
+  "webhook_notifications": {},
+  "timeout_seconds": 0,
+  "max_concurrent_runs": 1,
+  "tasks": [
+    {
+      "task_key": "etl_silver",
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/alejandrowsky.dev@outlook.com/delitos_cdmx_DE_to_ML/notebooks/01_bronze_to_silver",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "feature_engineering",
+      "depends_on": [
+        {
+          "task_key": "etl_silver"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/alejandrowsky.dev@outlook.com/delitos_cdmx_DE_to_ML/notebooks/02_silver_to_gold",
+        "source": "WORKSPACE"
+      },
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "webhook_notifications": {},
+      "disabled": false
+    },
+    {
+      "task_key": "entrenamiento",
+      "depends_on": [
+        {
+          "task_key": "feature_engineering"
+        }
+      ],
+      "run_if": "ALL_SUCCESS",
+      "notebook_task": {
+        "notebook_path": "/Workspace/Users/alejandrowsky.dev@outlook.com/delitos_cdmx_DE_to_ML/notebooks/03_prediction_model_delito",
+        "source": "WORKSPACE"
+      },
+      "existing_cluster_id": "0519-200023-7x1feffm",
+      "timeout_seconds": 0,
+      "email_notifications": {},
+      "disabled": false
+    }
+  ],
+  "queue": {
+    "enabled": true
+  },
+  "performance_target": "PERFORMANCE_OPTIMIZED"
+}
